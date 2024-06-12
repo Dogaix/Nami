@@ -1,3 +1,0 @@
-email aqui
-senha aqui
-prefixo de comando aqui

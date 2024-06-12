@@ -13,8 +13,6 @@ with open("client.txt", "r") as logi:
     password = logi.readline().strip()
     prefixo = logi.readline().strip()
 
-API = "API_AQUI"
-API_KEY = "API_KEY_AQUI"
 client = projz.Client(commands_prefix="!")
 print(prefixo)
 

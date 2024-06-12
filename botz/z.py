@@ -4,8 +4,6 @@ import logging
 import projz
 from projz import model
 
-
-# Configuração do logger
 logging.basicConfig(filename='app.log', filemode='w', format='%(asctime)s - %(levelname)s - %(message)s', level=logging.DEBUG)
 
 with open("client.txt", "r") as logi:
@@ -14,9 +12,6 @@ with open("client.txt", "r") as logi:
     prefixo  = logi.readline().strip()
 
 client = projz.Client(commands_prefix="!")
-print(prefixo)
-
-# Configurando o logger
 logger = logging.getLogger(__name__)
 
 @client.on_message()

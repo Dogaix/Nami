@@ -9,9 +9,9 @@ from projz import model
 logging.basicConfig(filename='app.log', filemode='w', format='%(asctime)s - %(levelname)s - %(message)s', level=logging.DEBUG)
 
 with open("client.txt", "r") as logi:
-    email = logi.readline().strip()
+    email    = logi.readline().strip()
     password = logi.readline().strip()
-    prefixo = logi.readline().strip()
+    prefixo  = logi.readline().strip()
 
 client = projz.Client(commands_prefix="!")
 print(prefixo)

@@ -20,27 +20,25 @@ Para executar o Nami, certifique-se de ter instalado:
 
 1. Clone este repositório e navegue até o diretório:
 
-    ```bash
-    git clone <URL_do_seu_repositório>
-    cd Nami
-    ```
+```bash
+git clone <URL_do_seu_repositório>
+cd Nami
+```
 
 2. Instale as dependências:
 
-    ```bash
-    pip install -r requirements.txt
-    ```
+```bash
+pip install -r requirements.txt
+```
 
 3. Configuração:
-
    - Crie um arquivo `client.txt` com as credenciais necessárias para o login do cliente `projz`.
    - Configure o arquivo conforme suas necessidades antes de executar o script.
 
 4. Execução:
-
-    ```bash
-    python nami.py
-    ```
+```bash
+python nami.py
+```
 
 ## Exemplo de Uso
 ```py

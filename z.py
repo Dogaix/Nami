@@ -6,10 +6,11 @@ from projz import model
 
 logging.basicConfig(filename='app.log', filemode='w', format='%(asctime)s - %(levelname)s - %(message)s', level=logging.DEBUG)
 
-with open("client.txt", "r") as logi:
-    email    = logi.readline().strip()
-    password = logi.readline().strip()
-    prefixo  = logi.readline().strip()
+with open("config.json", "r") as login:
+    data     = json.load(login)
+    email    = data['email']
+    password = data['senha']
+    prefixo  = data['prefixo']
 
 client = projz.Client(commands_prefix="!")
 logger = logging.getLogger(__name__)

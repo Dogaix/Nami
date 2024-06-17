@@ -26,7 +26,10 @@ async def handle_echo(message: projz.ChatMessage):
         await client.send_message(message.thread_id, content=message.content)
         
     if message.content == "oi":
-        await client.send_message(thread_id=message.message_id, content="oooooi")  # Corrigido para usar await
+        await client.send_message(thread_id=message.message_id, content="oooooi")
+
+    if message.content == "tudo bem?":
+        await client.send_message(message.message_id, content="Tudo sim! E você?")
 
 # Comando para colocar o bot offline
 @client.on_command("off")
@@ -35,13 +38,16 @@ async def offff(message: projz.ChatMessage):
     await client.change_chat_online_status(message.thread_id, is_online=False)
     await client.send_message(message.thread_id, content=f"Estou off agora, {message.author.nickname}!")
 
-# Exemplo de comando off2
-@client.on_command("off2")
-async def off2(message: projz.ChatMessage):
-    logger.info(f'Recebido comando off2 da thread {message.thread_id}')
-    chats = await projz.Client.get_chat_messages(client, thread_id=message.thread_id, size=32)
-    print(chats)
-    await message.send_message(message.thread_id, content="oi")
+@client.on_command("soma")
+async def command_soma(message: projz.ChatMessage):
+    try:
+        _, num1, num2 = message.content.split()
+        num1 = int(num1)
+        num2 = int(num2)
+        resultado = num1 + num2
+        await client.send_message(message.thread_id, content=f"A soma de {num1} e {num2} é {resultado}.")
+    except ValueError:
+        await client.send_message(message.thread_id, content="Por favor, forneça dois números válidos para soma.")
 
 # Função principal para login e execução contínua
 async def main():

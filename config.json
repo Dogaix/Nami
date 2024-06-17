@@ -1,6 +1,7 @@
 [
   {
-    'email' : 'seu email aqui',
-    'senha' : 'sua senha aqui'
+    "email"   : "seu email aqui",
+    "senha"   : "sua senha aqui",
+    "prefixo" : "!"
   }
 ]

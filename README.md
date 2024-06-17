@@ -21,7 +21,7 @@ Para executar o Nami, certifique-se de ter instalado:
 1. Clone este repositório e navegue até o diretório:
 
 ```bash
-git clone <URL_do_seu_repositório>
+git clone https://github.com/Dogaix/Nami
 cd Nami
 ```
 

@@ -97,3 +97,7 @@ if __name__ == "__main__":
     loop.run_until_complete(main())
     loop.run_forever()
 ```
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=Dogaix/Nami&type=date&legend=top-left)](https://www.star-history.com/#Dogaix/Nami&type=date&legend=top-left)
